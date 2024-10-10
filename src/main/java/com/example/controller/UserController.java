@@ -16,7 +16,7 @@ import com.example.entity.User;
 import com.example.service.UserService;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/users")
 public class UserController {
 
 	@Autowired
@@ -29,7 +29,7 @@ public class UserController {
 	
 	//create user
 	@PostMapping()
-	public ResponseEntity<User> saveUser(@RequestBody User user){
+	public ResponseEntity<User> createUser(@RequestBody User user){
 		User createUser = userService.createUser(user);
 		return new ResponseEntity<>(createUser,HttpStatus.CREATED);
 	}
@@ -37,8 +37,8 @@ public class UserController {
 	
 	// get  All Users
 	@GetMapping()
-	public ResponseEntity<List<User>> getAllUser(){
-		List<User> allUser = userService.getAllUser();
+	public ResponseEntity<List<User>> getAllUsers(){
+		List<User> allUser = userService.getAllUsers();
 		return ResponseEntity.ok(allUser);
 	}
 }

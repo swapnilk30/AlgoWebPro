@@ -10,5 +10,14 @@ public interface UserService {
 	User createUser(User user);
 	
 	//getAll Users
-	List<User> getAllUser();
+	List<User> getAllUsers();
+	
+	//get user by id
+	User getUserById(String userId);
+	
+	//update user
+	User updateUser(String userId,User user);
+	
+	//delete user
+	void deleteUser(String userId);
 }

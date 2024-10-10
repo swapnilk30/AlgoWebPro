@@ -30,9 +30,27 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public List<User> getAllUser() {
+	public List<User> getAllUsers() {
 		List<User> users = userRepository.findAll();
 		return users;
+	}
+
+	@Override
+	public User getUserById(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User updateUser(String userId, User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteUser(String userId) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
